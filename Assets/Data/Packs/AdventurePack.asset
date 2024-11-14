@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f5e9abe6d546d40a42ce9b3d8d51eb, type: 3}
+  m_Name: AdventurePack
+  m_EditorClassIdentifier: 
+  Name: Adventure Pack
+  Description: Some adventure stuff for you to use
+  Icon: {fileID: -6009198046271197863, guid: 416d7ad4879a2ec4c99603e9260521e1, type: 3}
+  Price: 500
+  Oldrice: 0
+  Items:
+  - Item: {fileID: 11400000, guid: 9a59ddda959a85348ab33d7adaf65715, type: 2}
+    Amount: 1
+  - Item: {fileID: 11400000, guid: a3beb93976a779545b85bdc140c9e4c2, type: 2}
+    Amount: 5
+  - Item: {fileID: 11400000, guid: 19b4691559bd0884d8cf175584f52f01, type: 2}
+    Amount: 12
+  - Item: {fileID: 11400000, guid: 958b89f292968b845942306e63be4a96, type: 2}
+    Amount: 1
+  - Item: {fileID: 11400000, guid: abf291e3be014c742867f0b7450cdd78, type: 2}
+    Amount: 5
