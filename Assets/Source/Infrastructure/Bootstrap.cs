@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Source.Exceptions;
 using Source.Shop;
 using Source.Shop.Controller;
 using Source.Shop.Data;
@@ -14,6 +15,7 @@ namespace Source.Infrastructure {
         [SerializeField] private ShopItemView shopItemViewPrefab;
         [SerializeField] private PacksShopView shopView;
         [SerializeField] private AllPacksData _allPacksData;
+        [SerializeField] private ExceptionPopup _exceptionPopup;
 
         [Header("Test values")]
         [SerializeField] private int _startBalance;
@@ -26,8 +28,9 @@ namespace Source.Infrastructure {
             IShopModel shopModel = new PacksShopModel(shopPacksProvider);
             
             shopView.Init(shopModel);
-            
-            IShopController shopController = new PacksShopController(userDataService, shopModel, shopView);
+
+            IShopController shopController =
+                new PacksShopController(userDataService, shopModel, shopView, _exceptionPopup);
         }
     }
 }
