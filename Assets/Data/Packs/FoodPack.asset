@@ -17,8 +17,8 @@ MonoBehaviour:
   Description: Hungry? Not a problem! Buy something tasty, juicy, and deli.. * ahem*,
     I meant the basic set of food, yes, exactly
   Icon: {fileID: -2844531463381759980, guid: f2846ec1658c8534d8487b998ae89b4b, type: 3}
-  Price: 100
-  OldPrice: 0
+  Price: 250
+  OldPrice: 275
   Items:
   - Item: {fileID: 11400000, guid: 8bb9c6c7aece5414ba43890a83ac41cd, type: 2}
     Quantity: 10

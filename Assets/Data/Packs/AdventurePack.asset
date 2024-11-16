@@ -17,7 +17,7 @@ MonoBehaviour:
   Description: Some adventure stuff for you to use
   Icon: {fileID: -6009198046271197863, guid: 416d7ad4879a2ec4c99603e9260521e1, type: 3}
   Price: 500
-  OldPrice: 0
+  OldPrice: 1000
   Items:
   - Item: {fileID: 11400000, guid: 9a59ddda959a85348ab33d7adaf65715, type: 2}
     Quantity: 1

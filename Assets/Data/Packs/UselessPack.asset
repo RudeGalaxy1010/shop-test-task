@@ -17,7 +17,7 @@ MonoBehaviour:
   Description: That's it! You want it - you got it! The most useless pack I've ever
     seen
   Icon: {fileID: 4606908045521496030, guid: 2b8558b645a07d74582677fd0bf9dfa9, type: 3}
-  Price: 1
+  Price: 750
   OldPrice: 0
   Items:
   - Item: {fileID: 11400000, guid: dd32f41ed6274df4eaf5b77334f09a7a, type: 2}
