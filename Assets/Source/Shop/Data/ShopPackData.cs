@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Source.Shop.Data {
-    [CreateAssetMenu(menuName = "Config/" + nameof(ShopPackData), fileName = nameof(ShopPackData))]
+    [CreateAssetMenu(menuName = "Data/" + nameof(ShopPackData), fileName = nameof(ShopPackData))]
     public class ShopPackData : ScriptableObject, IShopItemData {
         public string Id;
         public string Name;
