@@ -4,8 +4,8 @@ using Source.Shop.Data;
 using Source.UserData;
 
 namespace Source.Shop.Model {
-    public class PacksShopModel {
-        public event Action<ChangedPackData> PackChanged;
+    public class PacksShopModel : IShopModel {
+        public event Action<ChangedData> PackChanged;
 
         private readonly IShopPacksProvider _shopPacksProvider;
 
@@ -20,8 +20,8 @@ namespace Source.Shop.Model {
             _packs = _shopPacksProvider.GetAvailablePacks();
 
             for (int i = 0; i < _packs.Count; i++) {
-                PackChanged?.Invoke(new ChangedPackData {
-                    Pack = _packs[i],
+                PackChanged?.Invoke(new ChangedData {
+                    Data = _packs[i],
                     WasPurchased = purchasedItemsStorage.HasUniqueItem(_packs[i].Id)
                 });
             }

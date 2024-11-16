@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Source.Shop.View {
-    public class PurchaseButton : MonoBehaviour {
+    public class PurchaseButtonView : MonoBehaviour {
         public event Action OnClick;
         
         [SerializeField] private Button _button;

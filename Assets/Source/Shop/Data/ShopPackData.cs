@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Source.Shop.Data {
     [CreateAssetMenu(menuName = "Config/" + nameof(ShopPackData), fileName = nameof(ShopPackData))]
-    public class ShopPackData : ScriptableObject {
+    public class ShopPackData : ScriptableObject, IShopItemData {
         public string Id;
         public string Name;
         public string Description;

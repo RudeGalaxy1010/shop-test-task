@@ -14,7 +14,7 @@ namespace Source.Shop.View {
         [SerializeField] private TMP_Text _header;
         [SerializeField] private TMP_Text _description;
         [SerializeField] private Image _icon;
-        [SerializeField] private PurchaseButton _purchaseButton;
+        [SerializeField] private PurchaseButtonView purchaseButtonView;
         [SerializeField] private Transform _itemsContainer;
         [SerializeField] private ShopItemView _shopItemViewPrefab;
         
@@ -24,7 +24,7 @@ namespace Source.Shop.View {
         public ShopPackData Pack => _pack;
 
         private void Awake() {
-            _purchaseButton.OnClick += OnPurchaseButtonClick;
+            purchaseButtonView.OnClick += OnPurchaseButtonViewClick;
         }
         
         public void Assign(ShopPackData pack, bool wasPurchased) {
@@ -41,7 +41,7 @@ namespace Source.Shop.View {
             _description.text = _pack.Description;
             _icon.gameObject.SetActive(_pack.Icon != null); // Icon is optional
             _icon.sprite = _pack.Icon;
-            _purchaseButton.Assign(_pack.Price, _pack.OldPrice);
+            purchaseButtonView.Assign(_pack.Price, _pack.OldPrice);
             
             for (int i = 0; i < _pack.Items?.Count; i++) {
                 ShopItemView itemView = Instantiate(_shopItemViewPrefab, _itemsContainer);
@@ -66,14 +66,14 @@ namespace Source.Shop.View {
 
         public void SetInteractable(bool isInteractable, bool wasPurchased = false) {
             if (!wasPurchased) {
-                _purchaseButton.SetInteractable(isInteractable);
+                purchaseButtonView.SetInteractable(isInteractable);
                 return;
             }
             
-            _purchaseButton.SetInteractable(isInteractable, overrideText: SoldOutText);
+            purchaseButtonView.SetInteractable(isInteractable, overrideText: SoldOutText);
         }
         
-        private void OnPurchaseButtonClick() {
+        private void OnPurchaseButtonViewClick() {
             PurchaseRequested?.Invoke(this);
         }
     }

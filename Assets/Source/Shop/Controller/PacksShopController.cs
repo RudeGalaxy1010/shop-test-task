@@ -1,31 +1,30 @@
 using System;
-using Source.Shop.Data;
 using Source.Shop.Model;
 using Source.Shop.View;
 using Source.UserData;
 using UnityEngine;
 
 namespace Source.Shop.Controller {
-    public class PacksShopController {
+    public class PacksShopController : IShopController {
         private readonly IUserDataService _userDataService;
-        private readonly PacksShopModel _shopModel;
-        private readonly PacksShopView _packsShopView;
+        private readonly IShopModel _shopModel;
+        private readonly IShopView _shopView;
 
-        public PacksShopController(IUserDataService userDataService, PacksShopModel shopModel, 
-            PacksShopView packsShopView) {
+        public PacksShopController(IUserDataService userDataService, IShopModel shopModel, IShopView shopView) {
             _userDataService = userDataService;
             _shopModel = shopModel;
-            _packsShopView = packsShopView;
+            _shopView = shopView;
 
-            _packsShopView.PurchaseRequested += OnPurchaseRequested;
+            _shopView.PurchaseRequested += OnPurchaseRequested;
             _shopModel.UpdateItems(_userDataService);
         }
 
-        private void OnPurchaseRequested(ShopPackData pack) {
-            Exception purchaseException = _userDataService.TryPurchaseUniqueItem(pack.Id, pack.Price);
+        private void OnPurchaseRequested(string id, int price) {
+            Exception purchaseException = _userDataService.TryPurchaseUniqueItem(id, price);
 
             if (purchaseException != null) {
                 Debug.LogError(purchaseException.Message);
+                // No return to update item anyway for correct 'interactable' value
             }
             
             _shopModel.UpdateItems(_userDataService);

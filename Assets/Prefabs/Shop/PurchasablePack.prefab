@@ -232,7 +232,7 @@ MonoBehaviour:
   _header: {fileID: 7715386158455867341}
   _description: {fileID: 7715386158619874554}
   _icon: {fileID: 7715386158520599672}
-  _purchaseButton: {fileID: 1582022976527665953}
+  purchaseButtonView: {fileID: 1582022976527665953}
   _itemsContainer: {fileID: 7715386157840691416}
   _shopItemViewPrefab: {fileID: 1461815542231287259, guid: a86f38e0cbad186448b1ca88fddb7ac1, type: 3}
 --- !u!1 &7715386158455867343

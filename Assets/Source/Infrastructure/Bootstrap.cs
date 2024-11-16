@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Source.Shop;
@@ -13,7 +12,7 @@ namespace Source.Infrastructure {
     public class Bootstrap : MonoBehaviour {
         [SerializeField] private Transform _canvasTransform;
         [SerializeField] private ShopItemView shopItemViewPrefab;
-        [SerializeField] private PacksShopView _packsShopView;
+        [SerializeField] private PacksShopView shopView;
         [SerializeField] private AllPacksData _allPacksData;
 
         [Header("Test values")]
@@ -24,11 +23,11 @@ namespace Source.Infrastructure {
             List<string> purchasedItemsIds = _purchasedPacks?.Where(x => x != null).Select(x => x.Id).ToList();
             IUserDataService userDataService = new UserDataService(_startBalance, purchasedItemsIds);
             IShopPacksProvider shopPacksProvider = new DirectLinkShopPacksProvider(_allPacksData);
-            PacksShopModel shopModel = new PacksShopModel(shopPacksProvider);
+            IShopModel shopModel = new PacksShopModel(shopPacksProvider);
             
-            _packsShopView.Init(shopModel);
+            shopView.Init(shopModel);
             
-            PacksShopController shopController = new PacksShopController(userDataService, shopModel, _packsShopView);
+            IShopController shopController = new PacksShopController(userDataService, shopModel, shopView);
         }
     }
 }
