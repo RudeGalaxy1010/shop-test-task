@@ -16,6 +16,7 @@ namespace Source.Infrastructure {
         [SerializeField] private PacksShopView shopView;
         [SerializeField] private AllPacksData _allPacksData;
         [SerializeField] private ExceptionPopup _exceptionPopup;
+        [SerializeField] private UserBalanceView _userBalanceView;
 
         [Header("Test values")]
         [SerializeField] private int _startBalance;
@@ -31,6 +32,8 @@ namespace Source.Infrastructure {
 
             IShopController shopController =
                 new PacksShopController(userDataService, shopModel, shopView, _exceptionPopup);
+            
+            _userBalanceView.Init(userDataService);
         }
     }
 }
