@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Source.Shop {
+namespace Source.Shop.View {
     public class PurchaseButton : MonoBehaviour {
         public event Action OnClick;
         
@@ -20,8 +20,12 @@ namespace Source.Shop {
             _priceText.text = price.ToString();
         }
 
-        public void SetInteractable(bool isInteractable) {
+        public void SetInteractable(bool isInteractable, string overrideText = "") {
             _button.interactable = isInteractable;
+
+            if (!string.IsNullOrEmpty(overrideText)) {
+                _priceText.text = overrideText;
+            }
         }
     }
 }

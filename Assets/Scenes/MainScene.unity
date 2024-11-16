@@ -533,6 +533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasTransform: {fileID: 1714553148}
-  _itemViewPrefab: {fileID: 1461815542231287259, guid: a86f38e0cbad186448b1ca88fddb7ac1, type: 3}
+  shopItemViewPrefab: {fileID: 1461815542231287259, guid: a86f38e0cbad186448b1ca88fddb7ac1, type: 3}
   _packsShopView: {fileID: 13117929}
   _allPacksData: {fileID: 11400000, guid: 0a42e14acd93ef74c84b6e43aea464d8, type: 2}
+  _startBalance: 1000
+  _purchasedPacks: []

@@ -10,6 +10,6 @@ namespace Source.Shop.Data {
         public Sprite Icon;
         public int Price;
         public int OldPrice;
-        public List<PackItem> Items;
+        public List<PackItemData> Items;
     }
 }

@@ -22,7 +22,7 @@ namespace Source.UserData {
             }
 
             if (price > _balance) {
-                return new Exception($"Not enough money to buy {itemId} with price {price}");
+                return new Exception($"Not enough money to buy '{itemId}' with price: {price}");
             }
 
             _balance -= price;

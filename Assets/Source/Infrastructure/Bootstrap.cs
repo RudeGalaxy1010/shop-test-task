@@ -1,6 +1,11 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Source.Shop;
+using Source.Shop.Controller;
 using Source.Shop.Data;
+using Source.Shop.Model;
+using Source.Shop.View;
 using Source.UserData;
 using UnityEngine;
 
@@ -11,8 +16,13 @@ namespace Source.Infrastructure {
         [SerializeField] private PacksShopView _packsShopView;
         [SerializeField] private AllPacksData _allPacksData;
 
+        [Header("Test values")]
+        [SerializeField] private int _startBalance;
+        [SerializeField] private List<ShopPackData> _purchasedPacks;
+
         private void Start() {
-            IUserDataService userDataService = new UserDataService(0, new List<string>());
+            List<string> purchasedItemsIds = _purchasedPacks?.Where(x => x != null).Select(x => x.Id).ToList();
+            IUserDataService userDataService = new UserDataService(_startBalance, purchasedItemsIds);
             IShopPacksProvider shopPacksProvider = new DirectLinkShopPacksProvider(_allPacksData);
             PacksShopModel shopModel = new PacksShopModel(shopPacksProvider);
             

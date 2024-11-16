@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Source.Shop.Data;
 using Source.UserData;
 
-namespace Source.Shop {
+namespace Source.Shop.Model {
     public class PacksShopModel {
         public event Action<ChangedPackData> PackChanged;
 
