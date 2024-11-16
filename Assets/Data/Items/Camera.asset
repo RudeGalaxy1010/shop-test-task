@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558315e513f3f01439248671b81d2e6d, type: 3}
   m_Name: Camera
   m_EditorClassIdentifier: 
-  Name: Camera
+  Id: camera
   Icon: {fileID: -4566190091907096745, guid: 83392a0c45d009b4ca9b8bc8ec04cc55, type: 3}

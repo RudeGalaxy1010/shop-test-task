@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 
 namespace Source.Shop.Data {
     [Serializable]
-    public class PackData {
+    public class PackItem {
         public ShopItemData Item;
-        public int Amount;
+        public int Quantity;
     }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558315e513f3f01439248671b81d2e6d, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: 
-  Name: Bomb
+  Id: bomb
   Icon: {fileID: -1483665779731714255, guid: 15bfc70256f3dbe4abc84ce6ffacf11c, type: 3}

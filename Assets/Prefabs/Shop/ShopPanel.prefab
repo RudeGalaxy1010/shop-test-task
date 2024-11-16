@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce785a2151748e946bb575e178ce5405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemsContainer: {fileID: 6390720274149064703}
+  _packsContainer: {fileID: 6390720274149064703}
+  _packViewPrefab: {fileID: 1801885209232898454, guid: ce9dd628cb01bc8458846108bd159ac0, type: 3}
 --- !u!1 &7013802426753180955
 GameObject:
   m_ObjectHideFlags: 0

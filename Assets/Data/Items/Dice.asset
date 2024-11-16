@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558315e513f3f01439248671b81d2e6d, type: 3}
   m_Name: Dice
   m_EditorClassIdentifier: 
-  Name: Dice
+  Id: dice
   Icon: {fileID: -2205863333093305225, guid: 7f080337138fccf41983b1dfefed52f6, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558315e513f3f01439248671b81d2e6d, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
-  Name: Hammer
+  Id: hammer
   Icon: {fileID: 5393448996881579246, guid: c83fa2ac472c64145a29bad9c05a9a50, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558315e513f3f01439248671b81d2e6d, type: 3}
   m_Name: Icecream
   m_EditorClassIdentifier: 
-  Name: Icecream
+  Id: icecream
   Icon: {fileID: 6236285840621759610, guid: ff777246aa1a2ab428c099c13271de80, type: 3}

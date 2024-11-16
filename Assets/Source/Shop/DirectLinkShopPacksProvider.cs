@@ -9,7 +9,7 @@ namespace Source.Shop {
             _allPacksData = allPacksData;
         }
 
-        public List<ShopPackItemData> GetAvailablePacks() {
+        public List<ShopPackData> GetAvailablePacks() {
             return _allPacksData.AllPacks;
         }
     }

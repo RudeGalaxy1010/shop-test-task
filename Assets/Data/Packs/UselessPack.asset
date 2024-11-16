@@ -12,18 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f5e9abe6d546d40a42ce9b3d8d51eb, type: 3}
   m_Name: UselessPack
   m_EditorClassIdentifier: 
-  Name: Usless pack
+  Id: useless_pack
+  Name: Useless Pack
   Description: That's it! You want it - you got it! The most useless pack I've ever
     seen
   Icon: {fileID: 4606908045521496030, guid: 2b8558b645a07d74582677fd0bf9dfa9, type: 3}
   Price: 1
-  Oldrice: 1
+  OldPrice: 0
   Items:
-  - Item: {fileID: 11400000, guid: 0971c16400fea82468d4c09d67057d21, type: 2}
-    Amount: 1
   - Item: {fileID: 11400000, guid: dd32f41ed6274df4eaf5b77334f09a7a, type: 2}
-    Amount: 2
-  - Item: {fileID: 11400000, guid: d69b77b4d737c174db60d7f407742728, type: 2}
-    Amount: 5
-  - Item: {fileID: 11400000, guid: 21eeac1a129c0854cbf503efff279a8f, type: 2}
-    Amount: 5
+    Quantity: 2
+  - Item: {fileID: 11400000, guid: 0971c16400fea82468d4c09d67057d21, type: 2}
+    Quantity: 1

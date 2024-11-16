@@ -1,9 +1,10 @@
+using Source.Shop.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Source.Shop {
-    public class ItemView : MonoBehaviour {
+    public class ShopItemView : MonoBehaviour {
         public struct ViewData {
             public Sprite Icon;
             public int Amount;
@@ -13,11 +14,11 @@ namespace Source.Shop {
         [SerializeField] private TMP_Text _value;
 
         // TODO: Fallback icon
-        public void Assign(ViewData data) {
-            _icon.sprite = data.Icon;
+        public void Assign(ShopItemData item, int quantity) {
+            _icon.sprite = item.Icon;
             // Amount label is optional
-            _value.gameObject.SetActive(data.Amount > 0);
-            _value.text = data.Amount.ToString();
+            _value.gameObject.SetActive(quantity > 0);
+            _value.text = quantity.ToString();
         }
     }
 }

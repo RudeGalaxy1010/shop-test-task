@@ -3,6 +3,6 @@ using Source.Shop.Data;
 
 namespace Source.Shop {
     public interface IShopPacksProvider {
-        List<ShopPackItemData> GetAvailablePacks();
+        List<ShopPackData> GetAvailablePacks();
     }
 }

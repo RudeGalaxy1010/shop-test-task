@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558315e513f3f01439248671b81d2e6d, type: 3}
   m_Name: Watermelon
   m_EditorClassIdentifier: 
-  Name: Watermelon
+  Id: watermelon
   Icon: {fileID: -8620474637164483525, guid: a4822d008712e02409c12034e8bbe37a, type: 3}
